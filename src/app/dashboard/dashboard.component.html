@@ -1,0 +1,32 @@
+<body>
+    <mat-sidenav-container fullscreen>
+        <mat-sidenav #sidenav [(opened)]="opened" mode="side">
+            <div class="list">
+                <img src="../../assets/images/logo.png"height="130%">
+            </div>
+            <hr>
+            <div style="height: 70%;">
+                <mat-list role="list">
+                    <a mat-list-item (click)="set(0)">Galary</a>
+                    <a mat-list-item (click)="set(1)">Mess List</a>
+                    <a mat-list-item (click)="set(2)">Solution</a>
+                </mat-list>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <mat-toolbar>
+                 <button mat-icon-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+                 <p style="flex: 1 1 auto;text-align: center;"> MESS APP </p>
+                 <div class="ml-auto" style="font-size: 15px;">{{name}}<button mat-icon-button (click)="login()"><mat-icon>logout</mat-icon></button></div>
+                  
+            </mat-toolbar>
+
+            <div class="main-content">
+                <router-outlet></router-outlet>
+            </div>
+                 
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+</body>

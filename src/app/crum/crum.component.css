@@ -1,0 +1,19 @@
+.data{
+    text-align: center;
+    padding: 4%;
+}
+
+input{
+    height: 40px;
+}
+
+table {
+    width: 100%;border: 2px;
+}
+
+th{
+    background-color:#A9A9A9;
+    font-size: 13px;
+    text-align: center;
+    color: rgb(255, 38, 0);
+}
